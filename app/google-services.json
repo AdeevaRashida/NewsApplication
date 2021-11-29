@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "59380073114",
+    "project_id": "newsapparidn",
+    "storage_bucket": "newsapparidn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59380073114:android:5ebf74d79f73f8c08a1523",
+        "android_client_info": {
+          "package_name": "com.adeeva.idn.newsapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59380073114-s1jnjabgrr2pjnohn5ql7ofiqe35r871.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSj2NhrFaQqFawZqvmdA_Nq0D-6efB1Tg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59380073114-s1jnjabgrr2pjnohn5ql7ofiqe35r871.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

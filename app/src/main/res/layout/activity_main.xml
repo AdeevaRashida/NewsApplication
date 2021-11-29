@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ciProfileMain"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/foto_dummy_pro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDateMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:text="@string/dummy_tgl"
+            app:layout_constraintBottom_toBottomOf="@id/ciProfileMain"
+            app:layout_constraintStart_toEndOf="@id/ciProfileMain"
+            app:layout_constraintTop_toTopOf="@id/ciProfileMain" />
+
+        <ImageButton
+            android:id="@+id/ibProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:background="@color/white"
+            android:contentDescription="@string/txt_image_view"
+            android:src="@drawable/person"
+            app:layout_constraintBottom_toBottomOf="@id/tvDateMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDateMain" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvHighlight"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300dp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:elevation="@dimen/_16dp"
+            app:cardCornerRadius="@dimen/_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ciProfileMain">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200dp"
+                    app:cardCornerRadius="@dimen/_20dp">
+
+                    <ImageView
+                        android:id="@+id/ivHighlight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:contentDescription="@string/txt_image_view"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/main_banner" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tv_highlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cvImage"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:text="@string/highlight"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sp"
+                    android:textStyle="bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_author_main"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_below="@id/tv_highlight"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:src="@drawable/foto_dummy_pro" />
+
+                <TextView
+                    android:id="@+id/tv_name_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_highlight"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_toEndOf="@id/iv_author_main"
+                    android:text="@string/nathania_slavi" />
+
+                <TextView
+                    android:id="@+id/tv_date_highlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_highlight"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:text="@string/date" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_title_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/breaking_news"
+            android:textColor="@color/black"
+            android:textColorLink="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvHighlight" />
+
+        <HorizontalScrollView
+            android:id="@+id/hs_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_lable">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:text="@string/all"
+                    android:textSize="@dimen/_18sp" />
+
+                <TextView
+                    android:id="@+id/tv_international"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_toEndOf="@id/tv_all"
+                    android:text="@string/international"
+                    android:textSize="@dimen/_18sp" />
+
+                <TextView
+                    android:id="@+id/tv_media"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_toEndOf="@id/tv_international"
+                    android:text="@string/media"
+                    android:textSize="@dimen/_18sp" />
+
+                <TextView
+                    android:id="@+id/tv_magazine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_toEndOf="@id/tv_media"
+                    android:text="@string/magazine"
+                    android:textSize="@dimen/_18sp" />
+
+                <TextView
+                    android:id="@+id/tv_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_toEndOf="@id/tv_magazine"
+                    android:text="@string/business"
+                    android:textSize="@dimen/_18sp" />
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintTop_toBottomOf="@id/hs_topic"
+            tools:layout_editor_absoluteX="16dp"
+            tools:listitem="@layout/news_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
